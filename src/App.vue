@@ -111,8 +111,12 @@ export default {
       }
     },
     onNextLevel() {
-      this.level++;
-      this.onStart();
+      if (this.level !== 2) {
+        this.level++;
+        this.onStart();
+      } else {
+        alert('that\'s all');
+      }
     }
   }
 }
